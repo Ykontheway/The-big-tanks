@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算器</title>
+		<link rel="stylesheet" type="text/css" href="计算器.css"/>
+		<script src="计算器.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<header>
+				<p id="daan"></p>
+			</header>
+			<div id="body1">
+				<div id="shuzi7">
+					<p>7</p>
+				</div>
+				<div id="shuzi8">
+					<p>8</p>	
+				</div>
+				<div id="shuzi9">
+					<p>9</p>
+				</div>
+				<div id="shuzi4">
+					<p>4</p>
+				</div>
+				<div id="shuzi5">
+					<p>5</p>
+				</div>
+				<div id="shuzi6">
+					<p>6</p>
+				</div>
+				<div id="shuzi1">
+					<p>1</p>
+				</div>
+				<div id="shuzi2">
+					<p>2</p>
+				</div>
+				<div id="shuzi3">
+					<p>3</p>
+				</div>
+				<div id="shuzi0">
+					<p>0</p>
+				</div>
+				<div id="dengyu">
+					<p>=</p>
+				</div>
+				<div id="shuzidian">
+					<a href="">.</a>
+				</div>
+			</div>
+			<div id="body2">
+				<div id="chu">
+					<p>/</p>
+				</div>
+				<div id="cheng">
+					<p>X</p>
+				</div>
+				<div id="jia">
+					<p>+</p>
+				</div>
+				<div id="jian">
+					<p>-</p>
+				</div>
+			</div>				
+		</div>
+	</body>
+	<script type="text/javascript">
+	var daan = document.getElementById("daan");
+	var shuzi1 = document.getElementById("shuzi1");
+	var shuzi2 = document.getElementById("shuzi2");
+	var shuzi3 = document.getElementById("shuzi3");
+	var shuzi4 = document.getElementById("shuzi4");
+	var shuzi5 = document.getElementById("shuzi5");
+	var shuzi6 = document.getElementById("shuzi6");
+	var shuzi7 = document.getElementById("shuzi7");
+	var shuzi8 = document.getElementById("shuzi8");
+	var shuzi9 = document.getElementById("shuzi9");
+	var shuzi0 = document.getElementById("shuzi0");
+	var shuzidian = document.getElementById("shuzidian");
+	var cheng = document.getElementById("cheng");
+	var chu = document.getElementById("chu");
+	var jia = document.getElementById("jia");
+	var jian = document.getElementById("jian");
+	shuzi1.onclick = function(){
+			daan.innerHTML = 1;
+			 a = 1;
+		}
+	shuzi2.onclick = function(){
+			daan.innerHTML = 2;
+			 a = 2;
+		}
+	shuzi3.onclick = function(){
+			daan.innerHTML = 3;
+			 a = 3;
+		}
+	shuzi4.onclick = function(){
+			daan.innerHTML = 4;
+			 a = 4;
+		}
+	shuzi5.onclick = function(){
+			daan.innerHTML = 5;
+			 a = 5;
+		}
+	shuzi6.onclick = function(){
+			daan.innerHTML = 6;
+			 a = 6;
+		}
+	shuzi7.onclick = function(){
+			daan.innerHTML = 7;
+			 a = 7;
+		}
+	shuzi8.onclick = function(){
+			daan.innerHTML = 8;
+			 a = 8;
+		}
+	shuzi9.onclick = function(){
+			daan.innerHTML = 9;
+			 a = 9;
+		}
+	jia.onclick = function (){
+			 b = a;
+			 c = 1;
+	}
+	jian.onclick = function (){
+			 b = a;
+			 c = 2;
+	}
+	cheng.onclick = function (){
+			 b = a;
+			 c = 3;
+	}
+	chu.onclick = function (){
+			 b = a;
+			 c = 4;
+	}
+	dengyu.onclick = function (){
+		switch(c){
+			case 1: {
+				var d = a + b;
+				daan.innerHTML = d;
+				break;
+			}
+			case 2: {
+				var d = b - a;
+				daan.innerHTML = d;
+				break;
+			}
+			case 3: {
+				var d = a * b;
+				daan.innerHTML = d;
+				break;
+			}
+			case 4: {
+				var d = b / a;
+				daan.innerHTML = d;
+				break;
+			}
+		}
+		
+	}
+	</script>
+</html>
