@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>微信开发全</title>
+	</head>
+	<body>
+		<h1>微信开发已就位</h1>
+		<label for="aa"><input type="button" name="aa" id="aa" value="测试准备"/></label>
+	</body>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("#aa").on("click",function(){
+			window.location.href ="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx93d6fddcae0d118d&redirect_uri=http://ykenterprice.applinzi.com/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E5%85%A8.php&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect"
+		})
+	</script>
+</html>
