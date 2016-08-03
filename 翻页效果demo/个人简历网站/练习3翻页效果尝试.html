@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>翻页效果尝试</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.contain {
+				margin: 0 auto;
+				position: relative;
+				width: 600px;
+				height: 600px;
+			}
+			
+			.page1 {
+				width: 600px;
+				height: 600px;
+				transform-style: preserve-3d;
+				background: lightgoldenrodyellow;
+				transition: all 2s ease-in-out;
+				transform-origin: left;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			
+			.page11,
+			.page12 {
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				z-index: 1;
+				background: lightgoldenrodyellow;
+				transition: all 2s ease-in-out;
+				transform-origin: left;
+			}
+			.page11{
+				z-index: 10;
+			}
+			p {
+				margin: 200px;
+				font-size: 60px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="contain">
+			<div class="page1">
+				<div class="page11">
+					<p>我是第一页</p>
+				</div>
+				<div class="page12">
+					<p>我是第二页</p>
+				</div>
+			</div>
+			<!--<div class="page2">
+				<div class="page21">
+					<p>我是第三页</p>
+				</div>
+				<div class="page22">
+					<p>我是第四页</p>
+				</div>
+			</div>
+			<div class="page3">
+				<div class="page31">
+					<p>我是第五页</p>
+				</div>
+				<div class="page32">
+					<p>我是第六页</p>
+				</div>
+			</div>-->
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("body").on("click", function() {
+			$(".page1").css("transform", "rotateY(-180deg)");
+			$(".page11").css({"zIndex":"1","transform":"rotateY(-180deg)"});
+			$(".page12").css({"zIndex":"10","transform":"rotateY(-180deg)"});
+		})
+	</script>
+
+</html>

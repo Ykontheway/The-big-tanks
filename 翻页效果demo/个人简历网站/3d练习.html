@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3d练习</title>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				background: lemonchiffon;
+			}
+			div{
+				width: 50%;
+				height: 100%;
+				margin-left: 50%;
+				background: lightblue;
+				/*overflow: hidden;*/
+				transition:all 2s ease-in-out;
+				transform-style: preserve-3d;
+				transform-origin: left;
+				position: relative;
+			}
+			p{
+				width: 100%;
+				height: 100%;
+				font-size: 60px;	
+				transition:all 2s ease-in-out;
+				/*transform-style: preserve-3d;*/
+				/*transform-origin: right;*/
+				position: absolute;			
+			}
+			/*.page2{
+				opacity: 0;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="">
+			<p class="page1">我是第一页</p>
+			<img src="img/1.jpg" class="page2"/>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("body").on("click",function(){
+			$("div").css("transform","rotateY(180deg)");
+//			$("p").css("transform","rotateY(180deg)");
+//			$("span").css("transform","rotateY(180deg)");
+			$(".page1").fadeOut(1000);
+			$(".page2").css("opacity","1");
+		})
+	</script>
+</html>

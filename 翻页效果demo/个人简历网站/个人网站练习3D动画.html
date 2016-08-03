@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人网站练习3D动画</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				-webkit-transform-style: preserve-3d;
+				-webkit-transform: rotateX(30deg);
+			}
+			
+			.contain div {
+				width: 180px;
+				height: 100px;
+				background: orange;
+				position: absolute;
+			}
+			
+			.contain {
+				height: 100px;
+				width: 180px;
+				margin: 180px auto;
+				position: relative;
+				-webkit-transform-style: preserve-3d;
+				background: pink;
+				/*transform: rotateX(30deg);*/
+				-webkit-transition: all 10s ease-in;
+			}
+			
+			.contain:hover {
+				transform: rotateY(3600deg);
+				/*transform-origin: center;*/
+			}
+			
+			section {
+				transform: rotateY(35deg) translateZ(100px);
+				background: green;
+				position: absolute;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="contain">
+			<section>
+
+			</section>
+		</div>
+
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		for(var i = 0; i < 36; i++) {
+			var div = $("<div></div>");
+			$(".contain").append(div);
+		}
+		for(var i = 0; i < 12; i++) {
+			$(".contain > div").eq(i).css("transform", "rotateY(" + 30 * i + "deg) translateZ(" + 360 + "px)")
+		}
+	</script>
+
+</html>
