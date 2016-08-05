@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>三级联动</title>
+		<style type="text/css">
+			body {
+				background: lightgoldenrodyellow;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			
+			<select name="" class="select1" onchange="changeSelect2(this)">
+			</select>
+			省
+			<select name="" class="select2"  onchange="changeSelect3(this)">
+			</select>
+			市
+			<select name="" class="select3">
+			</select>
+			经销商
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="三级联动资源.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+
+		for(var attribute in data[0]) {
+			var newOption = new Option(data[0][attribute],attribute);
+			$(".select1").append(newOption);
+		}
+
+		var val2;
+		function changeSelect2(obj) {
+			$(".select2")[0].options.length = 0;
+			$(".select3")[0].options.length = 0;
+			val2 = obj.value;
+//			console.log(data["0," + val2],val2);
+			for(var attribute in data["0," + val2]) {
+				var newOption = new Option(data["0," + val2][attribute],attribute);
+				$(".select2").append(newOption);
+//				console.log(newOption,val2);
+			}
+		}
+		
+		var val3;
+		function changeSelect3(obj) {
+			$(".select3")[0].options.length = 0;
+			val3 = obj.value;
+//			console.log(data["0," + val2 + "," + val3],val3);
+			for(var attribute in data["0," + val2 + "," + val3]) {
+				var newOption = new Option(data["0," + val2 + "," + val3][attribute],attribute);
+//				console.log(newOption);
+				$(".select3").append(newOption);
+			}
+		}
+	</script>
+
+</html>
