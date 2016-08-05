@@ -15,12 +15,15 @@
 		<div id="box">
 			
 			<select name="" class="select1" onchange="changeSelect2(this)">
+				<option value="">请选择</option>
 			</select>
 			省
 			<select name="" class="select2"  onchange="changeSelect3(this)">
+				<option value="">请选择</option>
 			</select>
 			市
 			<select name="" class="select3">
+				<option value="">请选择</option>
 			</select>
 			经销商
 		</div>
@@ -36,8 +39,8 @@
 
 		var val2;
 		function changeSelect2(obj) {
-			$(".select2")[0].options.length = 0;
-			$(".select3")[0].options.length = 0;
+			$(".select2")[0].options.length = 1;
+			$(".select3")[0].options.length = 1;
 			val2 = obj.value;
 //			console.log(data["0," + val2],val2);
 			for(var attribute in data["0," + val2]) {
@@ -49,7 +52,7 @@
 		
 		var val3;
 		function changeSelect3(obj) {
-			$(".select3")[0].options.length = 0;
+			$(".select3")[0].options.length = 1;
 			val3 = obj.value;
 //			console.log(data["0," + val2 + "," + val3],val3);
 			for(var attribute in data["0," + val2 + "," + val3]) {
