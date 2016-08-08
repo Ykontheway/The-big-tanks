@@ -1,0 +1,33 @@
+/* Center and Bottom */
+
+#notification_area {
+    z-index: 20000;
+}
+.notify_center {
+    background: #1E211F;
+}
+
+.notification {
+    clear: left;
+    float: left;
+    list-style: none;
+}
+
+.notification iframe {
+    border: 0;
+}
+
+.notification iframe body {
+    margin: 0;
+}
+
+.notify_content {
+    float: left;
+    background: #1E211F;
+    color: #eee;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    opacity: .7;
+    max-width: 22.5rem;
+    font-size: 1.5rem;
+}

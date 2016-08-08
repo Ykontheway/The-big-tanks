@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止IOS识别号码 -->
+    <meta content="email=no" name="format-detection"/>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        window.clientWidth = docEl.clientWidth;
+                        if (!window.clientWidth) return;
+                        docEl.style.fontSize = 20 * (window.clientWidth / 640) + 'px';
+                        window.base = 20 * (window.clientWidth / 640);
+                        document.getElementById('video_mp4').width = window.base*28.8;
+                        document.getElementById('video_mp4').height = window.base*16.1;
+                    };
+
+            try {
+                recalc();
+            } catch (e) {
+
+            }
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        window.canvasWidth = document.documentElement.clientWidth;
+        window.canvasHeight = document.documentElement.clientHeight;
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/notify.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/main_b.css?t=4">
+</head>
+<body>
+<div id="container">
+    <div class="page" id="loading" style="display: block">
+        <div class="inner">
+            <div class="clock"></div>
+            <div class="pointer"></div>
+            <p class="percent">20%</p>
+        </div>
+    </div>
+    <!-- 首页 -->
+    <div class="page" id="page1" style="display: none">
+        <div class="inner scrollWrapperIndex">
+            <div class="scroller">
+                <div class="top">
+                    <div class="share_btn" style="display:none"></div>
+                </div>
+                <div class="main">
+                    <ul class="nav clearfix">
+                        <li class="nav_active fl">首页</li>
+                        <li class="fl js_detail">活动说明</li>
+                        <li class='fl to_video'>精美视频</li>
+                        <li class="fl"><a href="http://www.dyk.com.cn/k4/">访问官网</a></li>
+                        <li class="fl js_list">中奖名单</li>
+                    </ul>
+                    <div class="btn_next js_toLayerInfo"></div>
+                    <div class="car"></div>
+                </div>
+                <div class="tab" id="video">
+                    <ul class="tab_nav">
+                        <li class="tab_nav_video active"></li>
+                        <li class="tab_nav_pic"></li>
+                    </ul>
+                    <div class="tab_con">
+                        <div class="tab_con_video" style="display:block">
+                            <video src="video/video.mp4" id="video_mp4"  x-webkit-airplay="true" poster="./images/page1_video_poster.png"  webkit-playsinline="true" preload="auto" style="display: inline-block;"></video>
+                            <div class="video_poster"></div>
+                        </div>
+                        <div class="tab_con_pic swiper-container" style="display: none;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  前往赌场的路危机重重 -->
+    <div class="page" id="page2" style="display: none">
+        <div class="inner">
+            <div class="btn_intro"></div>
+            <div class="btn_start"></div>
+        </div>
+    </div>
+    <!-- 车辆介绍 -->
+    <div class="page" id="page3" style="display: none">
+        <div class="inner">
+            <div class="car"></div>
+            <div class="circle"></div>
+            <div class="details_up details" style="display: none">
+                <div class="details_up_upcar transLeft"></div>
+                <div class="details_up_path"></div>
+                <div class="details_up_des transRight"></div>
+                <div class="details_up_point bigSmall"></div>
+            </div>
+            <div class="details_shift details" style="display: none">
+                <div class="details_shift_shifts transLeft"></div>
+                <div class="details_shift_path"></div>
+                <div class="details_shift_des transRight"></div>
+                <div class="details_shift_point bigSmall"></div>
+            </div>
+            <div class="details_airbags details" style="display: none">
+                <div class="details_airbags_airbags transLeft"></div>
+                <div class="details_airbags_path"></div>
+                <div class="details_airbags_des transRight"></div>
+                <div class="details_airbags_point bigSmall"></div>
+            </div>
+            <div class="details_motor details" style="display: block">
+                <div class="details_motor_motor transLeft"></div>
+                <div class="details_motor_path"></div>
+                <div class="details_motor_des transRight"></div>
+                <div class="details_motor_point bigSmall"></div>
+            </div>
+
+            <div class="choice_up choice">
+                <img src="images/4169_1453779106.png" alt="">
+            </div>
+            <div class="choice_shift choice">
+                <img src="images/4536_1453779106.png" alt="">
+            </div>
+            <div class="choice_airbags choice">
+                <img src="images/4505_1453779105.png" alt="">
+            </div>
+            <div class="choice_motor choice choosed">
+                <img src="images/2214_1453779105.png" alt="">
+            </div>
+
+            <div class="light"></div>
+            <div class="btn_start"></div>
+        </div>
+    </div>
+    <!-- 视频互动 -->
+    <div class="page" id="page4" style="display: none">
+        <div class="inner">
+            <canvas id="canvas"></canvas>
+            <div class="mask"></div>
+            <div class="tip"></div>
+        </div>
+    </div>
+    <!-- 俄罗斯轮盘 -->
+    <div class="page" id="page5" style="display: none">
+        <div class="inner">
+            <div class="res-2228 txt"></div>
+            <div class="res-2229 bet_point">
+                <select name="" id="">
+                    <option value="">选择点数：1-36</option>
+                    <option value="0">1~6</option>
+                    <option value="5">6~12</option>
+                    <option value="12">13~18</option>
+                    <option value="18">19~24</option>
+                    <option value="24">25~30</option>
+                    <option value="30">31~36</option>
+                </select>
+            </div>
+            <div class="res-2230 circle">
+                <div class="res-2231 indicator">
+                    <div class="indicator_pointer"></div>
+                </div>
+            </div>
+            <div class="res-2232 btn_bet js_bet"></div>
+        </div>
+    </div>
+
+    <div class="layer" id="layer_detail" style="display: none">
+        <div class="inner">
+            <div class="detailWrap">
+                <!-- <div class="scroller"> -->
+                <h3>活动说明</h3>
+                <div class="scrollWrap1">
+                    <div class="scroller">
+                        <p>
+                            东风悦达起亚K4邀你一起看电影过新年！自<span class="fc">1月29号起至2月14号</span>，参与“东风悦达起亚K4邀你看电影”活动，就有机会获得<span class="fc">时光网免费电子兑换票2张</span>！！<br>
+                            与东风悦达起亚K4一起观影，过大年！快来参加吧！<br>
+                            奖项设置：<br>
+                            获胜用户可获得由东风悦达起亚K4提供的的时光网免费电子兑换票2张。
+                        </p>
+                        <h4>特别声明：</h4>
+                        <p>
+                            参与者一旦参加本次活动，即视为同意并接受以下内容：<br>
+                            1、参与者应保证其参加本次活动时提交的个人信息真实、准确、有效，如因提交的手机信息有误导致奖品无法发放，将视为自动放弃，时光网不另行安排补发奖品；<br>
+                            2、手机号码为确认中奖和发奖的唯一凭证，请正确填写并保证手机号码畅通，如因填写错误或手机不畅通造成的发奖不成功，将视为放弃中奖资格，并不予重新更正发放；<br>
+                            3、本活动奖品之寄送地址仅限中国大陆地区；<br>
+                            4、本活动奖品不得转换、转让或折换现金；<br>
+                            5、活动期间，严禁通过使用第三方软件、编写代码、黑客攻击、非正常操作流程、非正确手机号或资料信息等手段和方式以获取抽奖机会的行为，一经发现，将取消已获得的抽奖资格及已获奖奖项；<br>
+                            6、如遇不可抗力因素，Mtime时光网有权终止活动，有权以相同价值产品替代已公布奖项；<br>
+                            7、时光电子兑换券的适用城市、影院及观影类型，请咨询：4006118118或者详询电子兑换使用说明（“电子兑换使用说明“+链接：<a href="http://group.mtime.com/help/discussion/3555651/">http://group.mtime.com/help/discussion/3555651/</a>）；<br>
+                            8、本次活动最终解释权归Mtime时光网所有。<br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+            <div class="close js_close_this"></div>
+        </div>
+    </div>
+
+    <div class="layer" id="layer_list" style="display: none">
+        <div class="inner">
+            <div class="scrollWrap2">
+                <div class="scroller">
+                    <ul>
+                        <li class="clearfix">
+                            <span class="name fl">谁谁谁</span>
+                            <span class="tel fl">13033336666</span>
+                            <span class="prize fl">获得观影票2张</span>
+                        </li>
+                        <li class="clearfix">
+                            <span class="name fl">谁谁谁</span>
+                            <span class="tel fl">13033336666</span>
+                            <span class="prize fl">获得观影票2张</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="close js_close_this"></div>
+        </div>
+    </div>
+
+    <div class="layer" id="layer_info" style="display: none">
+        <div class="inner">
+            <form action="">
+                <p class="clearfix">
+                    <label for="name" class="fl">*姓名：</label><input type="text" name="name" class="fl">
+                </p>
+                <p class="clearfix mt1">
+                    <label for="tel" class="fl">*手机号：</label><input type="text" name="tel" class="fl">
+                </p>
+                <p class="clearfix mt1">
+                    <label for="yuyue" class="ml42">是否预约试驾</label>
+                    <span>是</span>
+                    <input type="radio" name='yuyue' value="yes"  checked class="checked">
+                    <span class="ml25">否</span>
+                    <input type="radio" name='yuyue' value="no" >
+                </p>
+                <p class="clearfix mt1">
+                    <label for="" class="fl">*所在省份：</label>
+                    <span class="fl province">
+                        <select name="province" id="province" selectedindex="11"><option value="">请选择</option><option value="2">北京</option><option value="24">上海</option><option value="25">天津</option><option value="31">重庆</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="320000" selected="selected">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option><option value="710000">台湾省</option><option value="810000">香港特别行政区</option><option value="820000">澳门特别行政区</option>
+                        </select>
+                    </span>
+                    <span class="fl">省</span>
+                    <span class="fl city">
+                        <select name="city" id="city" onchange="getdealers();" selectedindex="0">
+                            <option value="">请选择</option><option value="310000">上海市</option>
+                        </select>
+                    </span>
+                    <span class="fl">市</span>
+                </p>
+                <p class="clearfix mt1">
+                    <label for="agency" class="fl">*选择经销商：</label>
+                    <span class="agency fl">
+                        <select name="agency" id="agency" class="fl">
+                            <option value="">请选择</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                        </select> 
+                    </span>
+                </p>
+                <p class="clearfix mt1">
+                    <label for="car" class="fl">*选择车型：</label><!-- <input type="text" name="car" class="fl"> -->
+                    <span class="selectcar fl">
+                        <select name="car" id="model" class="fl">
+                            <option value="">请选择</option>
+                            <option value="1.8L LUX AT">1.8L LUX AT</option>
+                            <option value="2.0L LUX AT">2.0L LUX AT</option>
+                            <option value="2.0L PRM AT">2.0L PRM AT</option>
+                            <option value="1.6T Turbo DCT">1.6T Turbo DCT</option>
+                            <option value="1.6T T-PRM DCT">1.6T T-PRM DCT</option>
+                            <option value="1.8L GL MT">1.8L GL MT</option>
+                            <option value="1.8L GL AT">1.8L GL AT</option>
+                            <option value="1.8L GLS AT">1.8L GLS AT</option>
+                            <option value="1.8L DLX AT">1.8L DLX AT</option>
+                            <option value="1.8L GLS Special">1.8L GLS Special</option>
+                            <option value="1.8L DLX Special">1.8L DLX Special</option>
+                            <option value="1.6T Special DCT">1.6T Special DCT</option>
+                        </select> 
+                    </span>
+                </p>
+                <p class="clearfix mt1">
+                    <label for="time" class="fl">*预计购车时间：</label>
+                    <span class="time fl">
+                        <select name="time" id="time" class="fl">
+                            <option value="">请选择</option>
+                            <option value="0~3个月内">0~3个月内</option>
+                            <option value="4~6个月内">4~6个月内</option>
+                            <option value="7~9个月内">7~9个月内</option>
+                            <option value="10~12个月内">10~12个月内</option>
+                        </select> 
+                    </span>
+                </p>
+                <div class="btn_submit">
+                    <input type="button" class="js_submit">
+                </div>
+            </form>
+            <div class="close js_close_info"></div>
+        </div>
+    </div>
+
+    <div class="layer prize" id="layer_prize_none" style="display: none">
+        <div class="inner">
+            <div class="close js_close_this"></div>
+            <div class="share js_share"></div>
+        </div>
+    </div>
+
+    <div class="layer prize" id="layer_prize" style="display: none">
+        <div class="inner">
+            <div class="close js_close_this"></div>
+            <div class="share js_share"></div>
+        </div>
+    </div>
+
+    <div class="layer" id="layer_share" style="display: none;z-index: 99">
+        <div class="inner">
+            <div class="tip"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/swiper3.07.min.js"></script>
+<script type="text/javascript" src="js/jquery-notify.min.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+<script type="text/javascript" src="js/dealersData.js"></script>
+<script type="text/javascript" src="js/allDealersData.js"></script>
+<script type="text/javascript">
+    // window.base_resource_url = '__CDN__';
+    $('#canvas').attr({ 'width': canvasWidth,'height': canvasHeight});
+    var dealerOptions = {
+        data : data
+    };
+    var areaSel = new select(dealerOptions);
+    areaSel.bind('#province',320000);
+    areaSel.bind('#city',320900);
+</script>
+<script type="text/javascript">
+function getdealers(cityval){
+    var city= $("#city");
+    if(!cityval){
+        cityval = city.val();
+    }
+    
+    var dealerids = "";
+    var dealers_lists;
+    var opt_title="";
+    dealers_lists = dealersData[cityval];
+    dealers_lists = eval("("+dealers_lists+")");
+    console.log(dealers_lists);
+    console.log(typeof dealers_lists )
+    if(dealers_lists&&dealers_lists.length > 0){
+        for(var i=0;i<dealers_lists.length;i++){
+           $('#agency').append('<option value="'+dealers_lists[i].name+'">'+ dealers_lists[i].name +'</option>');
+       }
+    }
+}
+</script>
+<script type="text/javascript" src="js/index_b.js"></script>
+<script type="text/javascript" src="http://api.izhida.cn/wechat_js_config?app_id=wx2fa55d29f3666fb3&v=1.2.0"></script>
+<script type="text/javascript">
+    window.wx && wx.ready(function(){
+        var wxFriendData = {
+            'link': 'http://Mtime-k4.dev.izhida.cn',
+            'imgUrl':'http://Mtime-k4.dev.izhida.cn/Public/static/images/share.jpg',
+            'title':'悦达起亚K4邀你看电影',
+            'desc':'这是赌王送你的筹码，快来试试手气吧',
+            success:function(){
+
+            }
+        };
+        var wxTimelineData = {
+            'link': 'http://Mtime-k4.dev.izhida.cn',
+            'imgUrl':'http://Mtime-k4.dev.izhida.cn/Public/static/images/share.jpg',
+            'title':'悦达起亚K4邀你看电影',
+            // 'desc':'',
+            success:function(){
+
+            }
+        };
+        wx.onMenuShareAppMessage(wxFriendData);
+        wx.onMenuShareTimeline(wxTimelineData);
+    })
+</script>
+</html>

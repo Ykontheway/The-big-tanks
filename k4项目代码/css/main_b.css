@@ -1,0 +1,772 @@
+.scrollWrapperIndex {
+  overflow: hidden; }
+  .scrollWrapperIndex .scroller {
+    height: 76.9rem; }
+
+body {
+  background-color: #242424; }
+
+#loading {
+  background: url(../images/loading_bg.jpg) 0 0 no-repeat;
+  background-size: 100% 100%; }
+  #loading .clock {
+    background: url(../images/loading_clock.png) 0 0 no-repeat;
+    width: 8rem;
+    height: 7.1rem;
+    left: 12.1rem;
+    top: 17.5rem;
+    background-size: 100% 100%;
+    position: absolute; }
+  #loading .pointer {
+    background: url(../images/loading_pointer.png) 0 0 no-repeat;
+    width: 0.45rem;
+    height: 3.75rem;
+    left: 15.8rem;
+    top: 17.85rem;
+    background-size: 100% 100%;
+    position: absolute;
+    -webkit-transform: rotate(-140deg);
+    -webkit-transform-origin: 50% 96%; }
+  #loading .percent {
+    position: absolute;
+    width: 100%;
+    top: 25.9rem;
+    text-align: center;
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+    color: #fff; }
+
+#page1 {
+  height: 100%; }
+  #page1 .top {
+    background: url(../images/page1_top_bg.jpg);
+    width: 32rem;
+    height: 13.65rem;
+    left: 0rem;
+    top: 0rem;
+    background-size: 100% 100%;
+    position: absolute; }
+    #page1 .top .share_btn {
+      background: url(../images/page1_btn_share.png);
+      width: 3.35rem;
+      height: 4.05rem;
+      left: 27rem;
+      top: 0rem;
+      background-size: 100% 100%;
+      position: absolute; }
+  #page1 .main {
+    background: url(../images/page1_main_bg.jpg);
+    width: 32rem;
+    height: 41.25rem;
+    left: 0rem;
+    top: 13.65rem;
+    background-size: 100% 100%;
+    position: absolute; }
+    #page1 .main .nav {
+      background: #a32a24;
+      width: 32rem;
+      height: 2.9rem;
+      left: 0rem;
+      top: 0rem;
+      background-size: 100% 100%;
+      position: absolute; }
+      #page1 .main .nav li {
+        width: 5.6rem;
+        height: 100%;
+        margin-left: 0.5rem;
+        line-height: 2.9rem;
+        color: rgba(255, 255, 255, 0.302); }
+        #page1 .main .nav li a {
+          color: rgba(255, 255, 255, 0.302); }
+      #page1 .main .nav .nav_active {
+        background: url(../images/page1_nav_active.png);
+        background-size: 100% 100%;
+        font-size: 1.2rem;
+        font-family: "Microsoft YaHei";
+        color: white;
+        text-align: center; }
+        #page1 .main .nav .nav_active a {
+          color: rgba(255, 255, 255, 0.302); }
+    #page1 .main .btn_next {
+      background: url(../images/page1_btn_next.png);
+      width: 14.2rem;
+      height: 3.3rem;
+      left: 16.35rem;
+      top: 19.1rem;
+      background-size: 100% 100%;
+      position: absolute; }
+    #page1 .main .car {
+      background: url(../images/page1_k4.png);
+      width: 32rem;
+      height: 18.85rem;
+      left: 0rem;
+      top: 22.35rem;
+      background-size: 100% 100%;
+      position: absolute; }
+  #page1 .tab {
+    background: url(../images/page1_tab_bg.jpg);
+    width: 32rem;
+    height: 22.2rem;
+    left: 0rem;
+    top: 54.7rem;
+    background-size: 100% 100%;
+    position: absolute; }
+    #page1 .tab .tab_nav_video {
+      background: url(../images/page1_btn_video.png);
+      width: 14.45rem;
+      height: 2.7rem;
+      left: 1.4rem;
+      top: 0rem;
+      background-size: 100% 100%;
+      position: absolute; }
+    #page1 .tab .tab_nav_video.active {
+      background: url(../images/page1_btn_video_active.png);
+      width: 14.45rem;
+      height: 2.7rem;
+      left: 1.4rem;
+      top: 0rem;
+      background-size: 100% 100%;
+      position: absolute; }
+    #page1 .tab .tab_nav_pic {
+      background: url(../images/page1_btn_pic.png);
+      width: 14.45rem;
+      height: 2.7rem;
+      left: 16rem;
+      top: 0rem;
+      background-size: 100% 100%;
+      position: absolute; }
+    #page1 .tab .tab_nav_pic.active {
+      background: url(../images/page1_btn_pic_active.png);
+      width: 14.45rem;
+      height: 2.7rem;
+      left: 16rem;
+      top: 0rem;
+      background-size: 100% 100%;
+      position: absolute; }
+    #page1 .tab .tab_con_video {
+      overflow: hidden;
+      border: 2px solid #a82d2a;
+      background: url(../images/page1_video_poster.png);
+      width: 28.9rem;
+      height: 13.5rem;
+      left: 1.4rem;
+      top: 2.8rem;
+      background-size: 100% 100%;
+      position: absolute; }
+      #page1 .tab .tab_con_video video {
+        width: 28.8rem;
+        height: 16.1rem; }
+      #page1 .tab .tab_con_video .video_poster {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/page1_video_poster.png);
+        background-size: 100% 100%; }
+    #page1 .tab .tab_con_pic {
+      border: 2px solid #a82d2a;
+      width: 28.9rem;
+      height: 13.5rem;
+      left: 1.4rem;
+      top: 2.8rem;
+      background-size: 100% 100%;
+      position: absolute; }
+      #page1 .tab .tab_con_pic img {
+        width: 100%;
+        height: 100%; }
+  #page1 .swiper-button-prev {
+    background: url(../images/page1_btn_prev.png);
+    background-size: 100% 100%; }
+  #page1 .swiper-button-next {
+    background: url(../images/page1_btn_prev.png);
+    -webkit-transform: rotate(180deg);
+    background-size: 100% 100%; }
+
+#page2 {
+  background: url(../images/page2_bg.jpg) 0 0 no-repeat;
+  background-size: 100% 100%;
+  /*@include pos(640rem,1008rem,0rem,0rem);*/ }
+  #page2 .btn_intro {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 16.2rem;
+    height: 4.6rem;
+    background: url(../images/page2_btn_intro.png);
+    background-size: 100% 100%; }
+  #page2 .btn_start {
+    width: 16.1rem;
+    height: 4.6rem;
+    background: url(../images/page2_btn_start.png);
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0.3rem;
+    bottom: 0; }
+
+#page3 {
+  background: url(../images/page3_bg.jpg) left top no-repeat;
+  background-size: 100% 100%;
+  /*.choice_up_bg {
+    position: absolute;
+    opacity: 1;
+    left: 24.65rem;
+    top: 35.25rem;
+    width: 4.7rem;
+    height: 4.7rem;
+    background: url(../images/4575_1453779105.png)left top no-repeat;
+    background-size: 100% 100%;
+  }*/ }
+  #page3 .details_airbags_airbags {
+    position: absolute;
+    opacity: 1;
+    left: 0.05rem;
+    top: 8.25rem;
+    width: 9.1rem;
+    height: 16rem;
+    background: url(../images/6240_1453779101.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_motor_path {
+    position: absolute;
+    opacity: 1;
+    left: 8.15rem;
+    top: 11.25rem;
+    width: 25.15rem;
+    height: 5.75rem;
+    background: url(../images/3046_1453779101.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_motor_point {
+    position: absolute;
+    opacity: 1;
+    left: 8.15rem;
+    top: 27.75rem;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url(../images/371_1453779101.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_motor_des {
+    position: absolute;
+    opacity: 1;
+    left: 13.65rem;
+    top: 9.45rem;
+    width: 16.35rem;
+    height: 12.2rem;
+    background: url(../images/2062_1453779100.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .car {
+    position: absolute;
+    opacity: 1;
+    left: -1.75rem;
+    top: 24.85rem;
+    width: 30.3rem;
+    height: 12.8rem;
+    background: url(../images/5865_1453779098.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_motor_motor {
+    position: absolute;
+    opacity: 1;
+    left: 0.85rem;
+    top: 11.6rem;
+    width: 9.35rem;
+    height: 10.6rem;
+    background: url(../images/7705_1453779100.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .btn_start {
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.6rem;
+    background: url(../images/page3_btn_start.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_airbags_path {
+    position: absolute;
+    opacity: 1;
+    left: 6.1rem;
+    top: 11.25rem;
+    width: 27.05rem;
+    height: 3.55rem;
+    background: url(../images/6253_1453779102.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_airbags_des {
+    position: absolute;
+    opacity: 1;
+    left: 13.6rem;
+    top: 9.4rem;
+    width: 11.6rem;
+    height: 7.1rem;
+    background: url(../images/2740_1453779102.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_airbags_point {
+    position: absolute;
+    opacity: 1;
+    left: 12.9rem;
+    top: 26.3rem;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url(../images/1536_1453779105.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_shift_shifts {
+    position: absolute;
+    opacity: 1;
+    left: 2.05rem;
+    top: 8.75rem;
+    width: 7.4rem;
+    height: 13.35rem;
+    background: url(../images/2488_1453779103.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_shift_path {
+    position: absolute;
+    opacity: 1;
+    left: 5.9rem;
+    top: 11.25rem;
+    width: 28.25rem;
+    height: 5.3rem;
+    background: url(../images/2115_1453779103.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_shift_des {
+    position: absolute;
+    opacity: 1;
+    left: 13.6rem;
+    top: 9.45rem;
+    width: 15.7rem;
+    height: 12.2rem;
+    background: url(../images/8268_1453779103.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_shift_point {
+    position: absolute;
+    opacity: 1;
+    left: 15.55rem;
+    top: 28.7rem;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url(../images/1536_1453779105.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_up_upcar {
+    position: absolute;
+    opacity: 1;
+    left: 0.9rem;
+    top: 13.35rem;
+    width: 11.15rem;
+    height: 6rem;
+    background: url(../images/912_1453779104.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_up_path {
+    position: absolute;
+    opacity: 1;
+    left: 5.9rem;
+    top: 11.25rem;
+    width: 28.6rem;
+    height: 3.4rem;
+    background: url(../images/5844_1453779104.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_up_des {
+    position: absolute;
+    opacity: 1;
+    left: 13.65rem;
+    top: 9.45rem;
+    width: 16.3rem;
+    height: 7.05rem;
+    background: url(../images/9228_1453779104.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .details_up_point {
+    position: absolute;
+    opacity: 1;
+    left: 13.6rem;
+    top: 32.35rem;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url(../images/1536_1453779105.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .choice_motor {
+    position: absolute;
+    opacity: 1;
+    left: 3.25rem;
+    top: 35.75rem;
+    /*  background: url(../images/page3_choosed_bg.png)left top no-repeat;
+      background-size: 100% 100%;*/ }
+  #page3 .choice_motor img {
+    width: 3.4rem;
+    height: 3.8rem;
+    vertical-align: middle; }
+  #page3 .choice_airbags {
+    position: absolute;
+    opacity: 1;
+    left: 11.15rem;
+    top: 35.75rem;
+    /*  background: url(../images/page3_choosed_bg.png)left top no-repeat;
+      background-size: 100% 100%;*/ }
+  #page3 .choice_airbags img {
+    width: 2.2rem;
+    height: 3.95rem;
+    vertical-align: middle; }
+  #page3 .choice_shift {
+    position: absolute;
+    opacity: 1;
+    left: 17.9rem;
+    top: 35.75rem;
+    /*background: url(../images/page3_choosed_bg.png)left top no-repeat;
+    background-size: 100% 100%;*/ }
+  #page3 .choice_shift img {
+    width: 3.65rem;
+    height: 3.4rem;
+    vertical-align: middle; }
+  #page3 .choice_up {
+    position: absolute;
+    opacity: 1;
+    left: 25.2rem;
+    top: 35.75rem;
+    /*background: url(../images/page3_choosed_bg.png)left top no-repeat;
+    background-size: 100% 100%;*/ }
+  #page3 .choice_up img {
+    width: 3.7rem;
+    height: 2rem;
+    vertical-align: middle; }
+  #page3 .choice {
+    width: 4.7rem;
+    height: 4.7rem;
+    text-align: center;
+    line-height: 4.7rem;
+    background: url(../images/4575_1453779105.png) 0 0 no-repeat;
+    background-size: 100% 100%; }
+  #page3 .choosed {
+    background: url(../images/page3_choosed_bg.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .light {
+    position: absolute;
+    opacity: 1;
+    left: 11.05rem;
+    top: 9.65rem;
+    width: 3.35rem;
+    height: 3.4rem;
+    background: url(../images/2407_1453779106.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page3 .circle {
+    height: 15.75rem;
+    width: 16.6rem;
+    background: #521512;
+    border-radius: 100%;
+    position: absolute;
+    left: -8.3rem;
+    top: 8.2rem; }
+
+#page4 .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7); }
+#page4 .tip {
+  background: url(../images/page4_tip.png) 0 0 no-repeat;
+  width: 15.55rem;
+  height: 14.4rem;
+  left: 11.15rem;
+  top: 18.8rem;
+  background-size: 100% 100%;
+  position: absolute; }
+
+#page5 {
+  background: url(../images/page5_bg.jpg) 0 0 no-repeat;
+  background-size: 100% 100%; }
+  #page5 .res-2232 {
+    position: absolute;
+    opacity: 1;
+    left: 8.9rem;
+    top: 43.65rem;
+    width: 14.2rem;
+    height: 3.3rem;
+    background: url(../images/1093_1453854255.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page5 .indicator {
+    position: absolute;
+    opacity: 1;
+    height: 100%;
+    width: 2.3rem;
+    left: 50%;
+    top: 0;
+    margin-left: -1.15rem;
+    -webkit-transform: rotate(3deg); }
+    #page5 .indicator .indicator_pointer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 2.3rem;
+      height: 4.2rem;
+      background: url(../images/3375_1453854403.png) left top no-repeat;
+      background-size: 100% 100%;
+      -webkit-transform: rotate(3deg); }
+  #page5 .res-2230 {
+    position: absolute;
+    opacity: 1;
+    left: 5.9rem;
+    top: 20.55rem;
+    width: 20.25rem;
+    height: 20.25rem;
+    background: url(../images/8696_1453854253.png) left top no-repeat;
+    background-size: 100% 100%; }
+  #page5 .res-2229 {
+    position: absolute;
+    opacity: 1;
+    left: 6.4rem;
+    top: 15.1rem;
+    width: 19.25rem;
+    height: 3.05rem;
+    background: url(../images/4814_1453854252.png) left top no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden; }
+    #page5 .res-2229 select {
+      width: 20.8rem;
+      height: 3.05rem;
+      border: none;
+      background: none;
+      outline: none;
+      color: #a82d2a;
+      font-size: 1.1rem;
+      text-indent: 0.6rem; }
+  #page5 .res-2228 {
+    position: absolute;
+    opacity: 1;
+    left: 7.85rem;
+    top: 5.9rem;
+    width: 16.3rem;
+    height: 7.9rem;
+    background: url(../images/7030_1453856838.png) left top no-repeat;
+    background-size: 100% 100%; }
+
+#layer_detail {
+  padding-top: 1rem;
+  font-family: "Microsoft YaHei";
+  color: white;
+  background: rgba(0, 0, 0, 0.6); }
+  #layer_detail .close {
+    background: url(../images/commen_close.png);
+    width: 4.3rem;
+    height: 5.75rem;
+    left: 25.3rem;
+    top: 0rem;
+    background-size: 100% 100%;
+    position: absolute; }
+  #layer_detail .detailWrap {
+    padding: 1.3rem 2rem;
+    border: 0.1rem #a32a24 solid;
+    width: 30rem;
+    height: 40rem;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    /*overflow: hidden;*/ }
+  #layer_detail .scrollWrap1 {
+    height: 31rem;
+    overflow: hidden; }
+  #layer_detail h3 {
+    text-align: center;
+    font-size: 1.9rem;
+    line-height: 6.2rem;
+    font-weight: normal; }
+  #layer_detail p {
+    font-size: 1.1rem;
+    line-height: 1.4rem; }
+  #layer_detail h4 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-weight: normal; }
+
+#layer_list {
+  padding-top: 1rem;
+  font-family: "Microsoft YaHei";
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem; }
+  #layer_list .close {
+    background: url(../images/commen_close.png);
+    width: 4.3rem;
+    height: 5.75rem;
+    left: 25.3rem;
+    top: 0rem;
+    background-size: 100% 100%;
+    position: absolute; }
+  #layer_list .scrollWrap2 {
+    padding: 6rem 1rem;
+    border: 0.1rem #a32a24 solid;
+    width: 30rem;
+    height: 40rem;
+    line-height: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    overflow: hidden; }
+    #layer_list .scrollWrap2 span {
+      text-align: center; }
+    #layer_list .scrollWrap2 .name {
+      width: 5rem; }
+    #layer_list .scrollWrap2 .tel {
+      width: 11rem; }
+    #layer_list .scrollWrap2 .prize {
+      width: 11.8rem; }
+
+#layer_info {
+  padding-top: 1rem;
+  font-family: "Microsoft YaHei";
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem; }
+  #layer_info .close {
+    background: url(../images/commen_close.png);
+    width: 4.3rem;
+    height: 5.75rem;
+    left: 25.3rem;
+    top: 0rem;
+    background-size: 100% 100%;
+    position: absolute; }
+  #layer_info form {
+    padding-top: 6rem;
+    border: 0.1rem #a32a24 solid;
+    width: 30rem;
+    height: 40rem;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto; }
+    #layer_info form .mt1 {
+      margin-top: 1rem; }
+    #layer_info form p {
+      line-height: 3rem; }
+    #layer_info form input {
+      width: 18.3rem;
+      height: 2.8rem;
+      border: 0.1rem #a32a24 solid;
+      background: #fff;
+      color: #a32a24;
+      font-size: 1.2rem;
+      text-indent: 1rem; }
+    #layer_info form label {
+      width: 10rem;
+      text-align: right; }
+    #layer_info form .btn_submit {
+      margin-top: 2.4rem;
+      text-align: center; }
+      #layer_info form .btn_submit input {
+        width: 14.2rem;
+        height: 3.3rem;
+        background: url(../images/layer_info_submit.png);
+        background-size: 100% 100%;
+        border: none; }
+    #layer_info form .ml42 {
+      margin-left: 4.2rem;
+      padding: 0 2.3rem;
+      text-align: center; }
+    #layer_info form .ml25 {
+      margin-left: 2.5rem; }
+    #layer_info form span {
+      padding-right: 0.6rem; }
+    #layer_info form input[type=radio] {
+      height: 0.8rem;
+      width: 0.8rem;
+      border-radius: 100%;
+      background: #fff;
+      position: relative; }
+    #layer_info form input.checked {
+      background: url(../images/layer_info_checked.png);
+      background-size: 100% 100%; }
+    #layer_info form select[name=location] {
+      width: 7.3rem;
+      height: 3rem;
+      background: url(../images/layer_info_select.jpg);
+      background-size: 100% 100%;
+      color: #a32a24;
+      text-indent: 0.5rem;
+      outline: none;
+      border: none; }
+    #layer_info form .selectcar, #layer_info form .time, #layer_info form .agency {
+      width: 18.3rem;
+      height: 2.8rem;
+      border: 0.1rem #a32a24 solid;
+      background: #fff;
+      color: #a32a24;
+      font-size: 1.2rem;
+      text-indent: 1rem;
+      overflow: hidden; }
+    #layer_info form select[name=car], #layer_info form select[name=time], #layer_info form select[name=agency], #layer_info form select[name=province], #layer_info form select[name=city] {
+      color: #a32a24;
+      text-indent: 0.5rem;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+      height: 100%;
+      width: 132%;
+      background: none; }
+    #layer_info form .province, #layer_info form .city {
+      width: 7.35rem;
+      height: 3.05rem;
+      background: url(../images/layer_select_bg.png);
+      background-size: 100% 100%;
+      overflow: hidden; }
+
+#layer_prize_none {
+  background: url(../images/layer_prize_none.png) 0 0 no-repeat;
+  background-size: 100% 100%; }
+  #layer_prize_none .close {
+    width: 4.8rem;
+    height: 4.5rem;
+    left: 23.5rem;
+    top: 7.5rem;
+    background-size: 100% 100%;
+    position: absolute; }
+  #layer_prize_none .share {
+    width: 15.5rem;
+    height: 3.35rem;
+    left: 8.3rem;
+    top: 32.7rem;
+    background-size: 100% 100%;
+    position: absolute; }
+
+#layer_prize {
+  background: url(../images/layer_prize.png) 0 0 no-repeat;
+  background-size: 100% 100%; }
+  #layer_prize .close {
+    width: 4.8rem;
+    height: 4.5rem;
+    left: 23.5rem;
+    top: 7.5rem;
+    background-size: 100% 100%;
+    position: absolute; }
+  #layer_prize .share {
+    width: 15.5rem;
+    height: 3.35rem;
+    left: 8.3rem;
+    top: 32.7rem;
+    background-size: 100% 100%;
+    position: absolute; }
+
+#layer_share {
+  background: rgba(0, 0, 0, 0.7); }
+  #layer_share .tip {
+    background: url(../images/layer_share_tip.png) 0 0 no-repeat;
+    width: 9.2rem;
+    height: 10.35rem;
+    left: 20.5rem;
+    top: 1.65rem;
+    background-size: 100% 100%;
+    position: absolute; }
+
+.fc {
+  color: #a92d2c;
+  font-weight: bold; }
+
+.transLeft {
+  -webkit-transform: translateX(-500px);
+  -webkit-animation: moveIn 1s ease forwards; }
+
+.transRight {
+  -webkit-transform: translateX(500px);
+  -webkit-animation: moveIn 1s ease forwards; }
+
+.bigSmall {
+  -webkit-animation: bigSmall 0.6s linear infinite alternate; }
+
+@-webkit-keyframes moveIn {
+  100% {
+    -webkit-transform: none; } }
+@-webkit-keyframes bigSmall {
+  100% {
+    -webkit-transform: scale(1.4); } }
+
+/*# sourceMappingURL=main_b.css.map */
