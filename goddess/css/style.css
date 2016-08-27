@@ -1,0 +1,168 @@
+/*重置化样式*/
+html,body,div,p,ul,li{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+}
+html {
+  font-family: sans-serif,"微软雅黑";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body{
+	font-size: 100%;
+}
+a{
+	color:#000;
+	text-decoration: none;
+	background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+img {
+  border: 0;
+}
+li{
+	list-style: none;
+}
+/*通用样式*/
+#load,
+#gameUI,
+#gameView,
+#gamePause,
+#gameOver{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #bb3f3e;
+}
+.btn{
+	font-size: 1.4em;
+	font-weight: bold;
+	border:solid 1px #333;
+	border-radius: 10px;
+	display: inline-block;
+	padding:20px 10px;
+	margin-top: 20px;
+	background-image: -webkit-linear-gradient(top,#f3ebdf 0%,#d3aba1 100%);
+}
+.share{
+	top: 60%;
+	left: 26%;
+}
+
+/*开始游戏层*/
+#gameUI{
+	display: block;
+}
+#gameUI p{
+	text-align: center;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #f1796a;
+}
+
+
+/*游戏层*/
+#gameView{
+	display: block;
+	background:url('../img/game_bg.png') 0 0 no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+#scoreView{
+	float: left;
+	width: 45%;
+	font-size: 2em;
+	font-weight: bold;
+	color: #000;
+	margin-top: 5px;
+	overflow: hidden;
+}
+#gameTime{
+	float: left;
+	font-size: 1.8em;
+	font-weight: bold;
+	border:solid 1px #333;
+	padding: 3px 6px;
+	margin-top: 5px;
+	background-color: #ccc;
+}
+#pauseBtn{
+	float: right;
+	padding: 3px 10px;
+	font-size: 1.8em;
+	font-weight: bold;
+	border:solid 1px #333;
+	margin-top: 5px;
+	margin-right: 5px;
+	background-color: #ccc;
+	position: relative;
+	z-index: 10;
+}
+#goddessImg{
+	position: absolute;
+	max-width: 100%;
+	overflow: hidden;
+	
+}
+#goddessImg ul{
+	overflow: hidden;
+}
+#goddesView li{
+	float: left;
+	max-width: 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	list-style: none;
+}
+.hand{
+	position: absolute;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*暂停游戏层*/
+#gamePause{
+	display: block;
+	z-index: 20;
+}
+#gamePause p{
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	color: #f1796a;
+}
+#contBtn{
+	margin-top: 15%;
+	left: 30%;
+	padding: 20px 20px;
+}
+/*结束游戏层*/
+#gameOver{
+	display: block;
+	z-index: 30;
+}
+#gameOver p{
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #f1796a;
+	text-align: center;
+}
+#gameOver p:nth-child(1){
+	margin-top: 40%;
+}
+#resetBtn{
+	/*margin-top: 20%;*/
+	left: 31%;
+	padding: 20px 20px;
+}

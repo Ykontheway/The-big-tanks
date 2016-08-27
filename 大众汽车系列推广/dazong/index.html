@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>产品亮点</title>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html,body{
+		height: 100%;
+	}
+	.swiper-container {
+	    height: 100%;
+	}  
+	.p1{
+		background-image: url(img/bg1.jpg);
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+	.p2{
+		background-image: url(img/bg2.jpg);
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+	.p3{
+		background-image: url(img/bg3.jpg);
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+	.p4{
+		background-image: url(img/bg4.jpg);
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+	.p5{
+		background-image: url(img/bg5.png);
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+	.p1_car{
+		width: 50%;
+		position: absolute;
+	}
+	.p2_text{
+		position: absolute;
+		top: 50%;
+		left: 20%;
+	}
+	.p5_button{
+		position: absolute;
+		top: 35%;
+		right: 5%;
+		width: 50%;
+		display: block;
+	}
+	.p5_button img{
+		width: 100%;
+
+	}
+	.p1_car_wrap{
+		width: 100%;
+		position: absolute;
+		top: 65%;
+	}
+	.p1_car{
+		width: 100%;
+	}
+	.p2>img{
+		position: absolute;
+		bottom: 3%;
+		width: 90%;
+		right: 0%;
+	}
+	.p3>img{
+		position: absolute;
+		bottom: 3%;
+		width: 50%;
+	}
+	.p4>img{
+		position: absolute;
+		bottom: 0%;
+		width: 100%;
+	}
+	#logo{
+		position: fixed;
+		top: 3%;
+		z-index: 10;
+		padding: 0 4%;
+	}
+	#logo>img{
+		width: 100%;
+	}
+	.p1_lun{
+		position: absolute;
+		top: 32%;
+		width: 14%;
+		left: 52%;
+	}
+@-webkit-keyframes car_rotate{
+	0%{
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg);
+	}
+	100%{
+		-webkit-transform:rotate(1080deg);
+		transform:rotate(1080deg);
+	}
+}
+	.p1_rotate{
+		-webkit-animation-name:car_rotate;
+		animation-name:car_rotate;
+		-webkit-transform-origin:center center;
+		transform-origin:center center;
+		/*-webkit-animation-duration: 2.3s;
+  		animation-duration: 2.3s;
+  		-webkit-animation-iteration-count: 1;
+  		animation-iteration-count: 1;*/
+  		
+	}
+	</style>
+</head>
+<body>
+<div id="logo"><img src="img/logo.png" alt=""></div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide p1">
+        	<div class="p1_car_wrap ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+        		<img class="ani p1_car" src="img/car.png" alt="">
+        		<img class="p1_lun ani" swiper-animate-effect="p1_rotate" swiper-animate-duration="2s" swiper-animate-delay="0.3s" src="img/lun.png" alt="">
+        	</div>
+        </div>
+        <div class="swiper-slide p2">
+        	<img class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/car2.png" alt="">
+        </div>
+        <div class="swiper-slide p3">
+        	<img class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/fa.png" alt="">
+        </div>
+        <div class="swiper-slide p4">
+        	<img class="ani" swiper-animate-effect="slideInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/nei.png" alt="">
+        </div>
+        <div class="swiper-slide p5"><!-- Slide 5 -->
+			<a class="p5_button ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" href="http://vw.faw-vw.com/m/orderndriver 
+"><img src="img/button.png" alt=""></a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+<script type="text/javascript">
+window.onload=function (){
+	$(".p1_car_wrap").height($(".p1_car").height());
+	var mySwiper = new Swiper ('.swiper-container', {
+	direction: 'vertical',
+	lazyLoading : true,
+	lazyLoadingInPrevNext : true,
+ 	onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+   		swiperAnimateCache(swiper); //隐藏动画元素 
+    	swiperAnimate(swiper); //初始化完成开始动画
+  	}, 
+  	onSlideChangeEnd: function(swiper){ 
+    	swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+}); 	
+}
+
+</script>
+</html>
+
+
+
+
