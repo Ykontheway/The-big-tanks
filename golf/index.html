@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Golf1.2T能力者挑战</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+            var version = parseFloat(RegExp.$1);
+            if(version>2.3){
+                var phoneScale = parseInt(window.screen.width)/640;
+                document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        }else{
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+        //微信去掉下方刷新栏
+        if(RegExp("MicroMessenger").test(navigator.userAgent)){
+            document.addEventListener('WeixinJSBridgeReady', function() {
+                WeixinJSBridge.call('hideToolbar');
+            });
+        }
+    </script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>-->
+    <link href="css/public.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        .star{
+            width: 15%;
+            position: absolute;
+            z-index: 150;
+        }
+        .opa{-webkit-animation:opa-pin 1s infinite;}
+        @-webkit-keyframes opa-pin{
+            0%{opacity: 0}
+            50%{opacity: 1}
+            100%{opacity: 0}
+        }
+        /*==========    p1    ===========*/
+        .p1{
+            background: #13b0fa;
+        }
+        #bg1{
+            width: 100%;
+            bottom: 0;
+        }
+        #ddd{
+            left: 19.6875%;
+            top: 12.5%;
+            width: 32.5%;
+        }
+        #p1Tt{
+            left: 16.875%;
+            top:21.13095238095238%;
+            width: 69.0625%;
+        }
+        #car1{
+            right: 22.1875%;
+            top:44.3452380952381%;
+            width: 50.46875%;
+        }
+        #g1{
+            width: 50.78125%;
+            left: 25.15625%;
+            bottom: 13.0952380952381%;
+            position: absolute;
+        }
+        #power{
+            left: 38.90625%;
+            bottom: 6.94444444444444%;
+            width: 22.1875%;
+        }
+        #pLeft{
+            left: 29.905%;
+            bottom: 7.53968253968254%;
+            width: 9.0625%;
+        }
+        #pRight{
+            left: 61.40625%;
+            bottom: 7.53968253968254%;
+            width: 8.59375%;
+        }
+        /*==========    p2    ===========*/
+        .p2{
+            background: url("img/bg2.jpg") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        #antTt{
+            left: 29.0625%;
+            bottom: 62.3015873015873%;
+            width: 42.65625%;
+            z-index: 10;
+        }
+        #n400{
+            left: 29.0625%;
+            bottom: 61.80555555555556%;
+            width: 25.9375%;
+            z-index: 10;
+        }
+        #tree{
+            left: 0;
+            top: 42.16269841269841%;
+            width: 100%;
+        }
+        #ant{
+            left: 0;
+            top: 29.96031746031746%;
+            width: 67.03125%;
+        }
+        #car2{
+            left: 27.96875%;
+            bottom: 7.14285714285714%;
+            width: 53.59375%;
+        }
+        .star1{
+            left: 30.5%;
+            bottom: 50.83730158730159%;
+        }
+
+        /*==========    p3    ===========*/
+        .p3{
+            background: url("img/bg3.jpg") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        #birdTt{
+            right: 28.28125%;
+            bottom: 64.28571428571429%;
+            width: 42.96875%;
+        }
+        #n80{
+            left: 44.84375%;
+            bottom: 61.9047619047619%;
+            width: 16.25%;
+        }
+        #flower{
+            left: 0;
+            top: 34.32539682539683%;
+            width: 38.90625%;
+        }
+        #bird{
+            right: 0.625%;
+            top: 43.1547619047619%;
+            width: 81.25%;
+        }
+        #car3{
+            left: 30%;
+            bottom: 6.94444444444444%;
+            width: 43.4375%;
+        }
+        .star2{
+            left: 30.78125%;
+            bottom: 52.08333333333333%;
+        }
+        /*==========    p4    ===========*/
+        .p4{
+            background: url("img/bg4.jpg") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        #snow{
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+        #rabbitTt{
+            left: 29.21875%;
+            bottom: 64.28571428571429%;
+            width: 42.34375%;
+            z-index: 5;
+        }
+        #n8{
+            left: 53.4375%;
+            bottom: 61.9047619047619%;
+            width: 7.8125%;
+            z-index: 5;
+        }
+        #rabbit{
+            width: 100%;
+            height: 91.56746031746032%;
+            bottom: 0;
+            position: absolute;
+            background: url("img/rabbit.png") 0 0 no-repeat;
+        }
+        #car4{
+            left: 24.6875%;
+            bottom: 7.14285714285714%;
+            width: 62.65625%;
+        }
+        .star3{
+            left: 15.46875%;
+            bottom: 17.46031746031746%;
+        }
+
+        /*==========    pIM    ===========*/
+        .p5{
+            background: url("img/bgIM.jpg") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        .pform{
+            bottom:10.31746031746032%;
+        }
+
+        #canvas{
+            display: block;
+            left: 0;
+            position: absolute;
+            
+        }
+
+    </style>
+</head>
+<body>
+<!--<audio src=""></audio>-->
+<div class="wrap">
+    <img src="img/logo.png" alt="" id="header"/>
+    <div class="inner index">
+
+        <div class="swipe p1">
+            <img src="img/bg1.png" alt="" id="bg1"/>
+            <img src="img/ddd.png" alt="" id="ddd"/>
+            <img src="img/p1Title.png" alt="" id="p1Tt"/>
+            <img src="img/car1.png" alt="" id="car1"/>
+            <img src="img/golf.png" alt="" id="g1"/>
+            <img src="img/power.png" alt="" id="power"/>
+            <img src="img/powerLeft.png" alt="" id="pLeft"/>
+            <img src="img/powerRight.png" alt="" id="pRight"/>
+            <img src="img/down1.png" alt="" class="vague"/>
+        </div>
+
+        <div class="swipe p2">
+            <img src="img/sg.png" alt="" class="star star1 opa"/>
+            <img src="img/antTitle.png" alt="" id="antTt"/>
+            <img src="img/400.png" alt="" id="n400"/>
+            <img src="img/tree.png" alt="" id="tree"/>
+            <img src="img/ant.png" alt="" id="ant"/>
+            <img src="img/car2.png" alt="" id="car2"/>
+            <img src="img/down3.png" alt="" class="vague"/>
+        </div>
+
+        <div class="swipe p3">
+            <img src="img/sg.png" alt="" class="star star2 opa"/>
+            <img src="img/birdTitle.png" alt="" id="birdTt"/>
+            <img src="img/80.png" alt="" id="n80"/>
+            <img src="img/flower.png" alt="" id="flower"/>
+            <img src="img/bird.png" alt="" id="bird"/>
+            <img src="img/car3.png" alt="" id="car3"/>
+            <img src="img/down3.png" alt="" class="vague"/>
+        </div>
+
+        <div class="swipe p4">
+            <img src="img/sg.png" alt="" class="star star3 opa"/>
+            <img src="img/snow.png" alt="" id="snow"/>
+            <img src="img/rabbitTitle.png" alt="" id="rabbitTt"/>
+            <img src="img/8.png" alt="" id="n8"/>
+            <img src="img/rabbit.png" alt="" id="rabbit"/>
+            <canvas height="698" width="366" id="canvas"></canvas>
+            <img src="img/car4.png" alt="" id="car4"/>
+            <img src="img/down4.png" alt="" class="vague"/>
+        </div>
+
+        <div class="swipe p5">
+            <a href="highlights.html" class="link linkLeft">
+                <img src="img/highlights1.png" alt="" class="linkBg"/>
+            </a>
+            <a href="showTVC.html" class="link linkRight">
+                <img src="img/showTVC1.png" alt="" class="linkBg"/>
+            </a>
+            <form action="###" class="pform fm">
+                <p><img src="img/invite.png" alt="" class="invite"/></p>
+                <p>
+                    <label for="clientName">姓<em class="aSpace"></em>名</label>
+                    <input type="text" id="clientName" class="text" name="clientName"/>
+                </p>
+                <div class="radioBox">
+                    <div class="customRadio">
+                        <label for="man">男</label>
+                        <input type="radio" name="sex" id="man" value="0" checked/>
+
+                    </div>
+                    <div class="customRadio">
+                        <label for="woman">女</label>
+                        <input type="radio" name="sex" id="woman" value="1"/>
+                    </div>
+                </div>
+                <p>
+                    <label for="tel">电<em class="aSpace"></em>话</label>
+                    <input type="text" id="tel" class="text"/>
+               </p>
+                <div class="p">
+                    <label for="carType">车<em class="aSpace"></em>型</label>
+                        <select name="carType" id="carType">
+                            <option value="1">GOLF1.2T</option>
+                            <option value="2">GOLF1.2T</option>
+                            <option value="3">GOLF1.2T</option>
+                            <option value="4">GOLF1.2T</option>
+                        </select>
+                </div>
+                <div class="p">
+                    <label for="province">省<em class="aSpace"></em>份 </label>
+                    <div class="cSR">
+                    <span class="customSelect">
+                        <select name="province" id="province">
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                        </select>
+                    </span>
+                    <span class="customSelect">
+                         <span class="cityLabel">城市</span>
+                        <select name="city" id="city">
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                        </select>
+                    </span>
+                    </div>
+                </div>
+                <div class="p">
+                    <label for="dealer">经销商</label>
+                        <select name="dealer" id="dealer">
+                            <option value="1">朝阳区大望路4S店</option>
+                            <option value="2">朝阳区大望路4S店</option>
+                            <option value="3">朝阳区大望路4S店</option>
+                        </select>
+                </div>
+                <input type="button" class="submit bIM"/>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    function sMove(selector, speed, delay, easing) {
+        
+        var _this=selector;
+        
+        _this.css({"-webkit-transform":"translate3d(0,0,0)","transition":""+speed+"s "+easing+" "+delay+"s"});
+
+    }
+    
+    function vagueMove(parent,delay) {
+        parent.find(".vague").css({"opacity":1,"transition":"0.1s linear "+delay+"s"});
+    }
+    
+$(function () {
+
+     var arr = ['8.png','106.png','80.png','190.png','200.png','400.png','ant.png','antTitle.png','bg1.png','bg2.jpg','bg3.jpg','bg4.jpg','bgIM.jpg','bird.png',"birdTitle.png","car1.png","car2.png","car3.png","car4.png","check.png","checked.png","ddd.png","down1.png","selectDown.png","down3.png","down4.png","flower.png","golf.png","highlights1.png","invite.png","logo.png","p1Title.png","power.png","powerLeft.png","powerRight.png","rabbit.png","rabbitTitle.png","showTVC1.png","snow.png","submit.png","tree.png"];
+    $(document).fnLoad(arr,fnStart);
+
+});
+
+    function fnStart() {
+
+        var swipeHeight=$(".swipe:first").height();
+        var swipeWidth=$(".swipe:first").width();
+
+
+
+        var ease="cubic-bezier(.25,.1,.25,1)",
+                easein="cubic-bezier(.16,.91,.59,.94)",
+                sine="cubic-bezier(.73,.46,.75,.7)",
+                easeout="cubic-bezier(.43,.18,.89,.62)";
+        
+       $("#car1,#pLeft,#ant,#car4").css({"-webkit-transform":"translate3d("+(-swipeWidth)+"px,0,0)"});/*  left  */
+
+        $("#pRight,#tree").css({"-webkit-transform":"translate3d("+(swipeWidth)+"px,0,0)"});/*  right   */
+
+        $("#flower,#car3").css({"-webkit-transform":"translate3d(0,"+(swipeHeight)+"px,0)"});/*  bottom   */
+
+        $("#power").css({"-webkit-transform":"translate3d(0,"+(-swipeHeight)+"px,0)"});/* top  */
+
+
+        $(".vague").css("opacity",0);
+        $("#car2,#g1").css("-webkit-transform","scale(0)");
+        $("#bird").css({"-webkit-transform":"scale(0) translate3d("+(swipeWidth)+"px,"+(-swipeHeight)+"px,0)"});
+        $("#rabbit").css({opacity:0});
+
+        function fnAnimate(){
+            /*==========    p1    ===========*/
+            if($(".inner").attr("index")=="1" && $(".p1").attr("animateBol")){
+               setTimeout(function () {
+                   sMove($("#car1"),1,0,sine);
+                   setTimeout(function () {
+                       $("#g1").addClass("scale").css({"-webkit-transform":"scale(1)"});
+                   },1200);
+                   sMove($("#power"),0.5,3.2,easeout);
+                   sMove($("#pLeft"),0.7,3.7,ease);
+                   sMove($("#pRight"),0.7,3.7,ease);
+                   setTimeout(function () {
+                       $("#pLeft").css({"-webkit-transform": "rotateY(-120deg)", "transition": "0.2s"});
+                       $("#pRight").css({"-webkit-transform": "rotateY(120deg)", "transition": "0.2s"});
+                   },4400);
+                   setTimeout(function () {
+                       $("#pLeft").css({"-webkit-transform":"rotateY(0deg)","transition": "0.1s"});
+                       $("#pRight").css({"-webkit-transform":"rotateY(0deg)","transition": "0.1s"});
+                   },4600);
+
+                   vagueMove($(".p1"),4.9);
+                   $(".p1").removeAttr("animateBol");
+               },1);
+            }
+
+            /*==========    p2    ===========*/
+            if($(".inner").attr("index")=="2" && $(".p2").attr("animateBol")){
+                $(".p2").removeAttr("animateBol");
+                sMove($("#tree"),0.6,0.7,ease);
+                var bol=true;
+                if(bol){
+                    bol=false;
+                    $(".star1").on("click", function () {
+                        $(".star1").removeClass("opa");
+                            $(".star1").css({"-webkit-transform":"translate3d("+swipeWidth+"px,"+swipeHeight+"px,0)","transition":"2s"});
+                        sMove($("#ant"),0.5,0.5,ease);
+                        $("#car2").css({"-webkit-transform":"scale(1)","transition":"1s 1.2s"});
+                        vagueMove($(".p2"),2.2);
+                    });
+                }
+            }
+
+            /*==========    p3    ===========*/
+            if($(".inner").attr("index")=="3" && $(".p3").attr("animateBol")){
+                sMove($("#flower"),1.5,0.5,ease);
+                var bol1=true;
+                if(bol1){
+                    bol1=false;
+                    $(".star2").on("click", function () {
+                        $(".star2").removeClass("opa");
+                        $(".star2").css({"-webkit-transform":"translate3d("+swipeWidth+"px,"+swipeHeight+"px,0)","transition":"2s"});
+                        $("#bird").css({"-webkit-transform":"translate3d(0,0,0)","transition":"1.5s 0.5s"});
+                        sMove($("#car3"),0.6,1.8,ease);
+                        vagueMove($(".p3"),2.7);
+                    });
+                }
+                $(".p3").removeAttr("animateBol");
+            }
+
+            /*==========    p4    ===========*/
+            if($(".inner").attr("index")=="4" && $(".p4").attr("animateBol")){
+                var bol2=true;
+                if(bol2){
+                    bol2=false;
+                    $(".star3").on("click", function () {
+                        $(".star3").removeClass("opa");
+                        $(".star3").css({"-webkit-transform":"translate3d("+swipeWidth+"px,"+swipeHeight+"px,0)","transition":"2s"});
+                        $("#rabbit").css({opacity:1,"transition":"1.2s 0.5s"});
+                        sMove($("#car4"),0.5,2,ease);
+                        vagueMove($(".p4"),2.8);
+                    });
+                }
+                $(".p4").removeAttr("animateBol");
+            }
+        }
+
+        fnAnimate();
+        $(document).fnSwipe(fnAnimate);
+    }
+</script>
+</html>

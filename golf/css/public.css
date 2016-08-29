@@ -1,0 +1,264 @@
+/* reset */
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: top;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;border:none;}
+textarea{resize:none;overflow: auto;}
+body{font-size: 12px;font-family: "微软雅黑";}
+
+html,body{
+    height: 100%;
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.inner{
+    width: 100%;
+    position: absolute;
+}
+.swipe{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+img{position: absolute;}
+.golf{
+    width: 50.78125%;
+}
+.vague{
+    left: 46.40625%;
+    bottom: 1.58730158730159%;
+    width: 6.40625%;
+}
+.submit{
+    left: 38.59375%;
+    bottom: 0;
+    position: absolute;
+    width: 31.48148148148148%;
+    height: 16.29116117850953%;
+    background: url("../img/submit.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.link{
+    display: block;
+    width: 41.875%;
+    height: 8.13492063492063%;
+    position: absolute;
+    z-index: 50;
+    bottom: 0.29761904761905%;
+}
+.linkLeft{
+    left: 6.09375%; 
+}
+.linkRight{
+    left: 50.78125%;
+}
+.linkBg{
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.aSpace{
+    width: 1em;
+    display: inline-block;
+}
+.submit_ok{
+    position: absolute;
+    width: 20em;
+    height:3em;
+    font-size: 30px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 100;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0.25em;
+}
+.thanks{
+    font-weight: normal;
+    color: #eee;
+    position: absolute;
+    left: 0;
+    padding-left: 0.5em;
+    font-size: 30px;
+    line-height:3em;
+    color: #eee;
+}
+/*==========    loading    ===========*/
+#loading{
+    width: 100%;
+    height: 100%;
+    background: #333;
+    text-align: center;
+}
+#loading p{
+    position: absolute;
+    height: 2%;
+}
+#load_percent{
+    bottom: 30%;
+    width: 100%;
+    font-size: 260%;
+}
+#load_wrap{
+    width: 80%;
+    bottom: 24%;
+    display: inline-block;
+    border:5px solid #333;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#load_time{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #666;
+    position: absolute;
+    left: -100%;
+}
+/*form*/
+select{
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    border:none;
+}
+.fm{
+    width: 84.375%;
+    height: 57.24206349206349%;
+    /*width 540 height 577*/
+    padding-left: 7.96875%;
+    position: absolute;
+    font-size: 26px;
+    color: #119ee2;
+}
+.invite{
+    width: 100%;
+}
+.fm p,.p,.radioBox{
+    width: 100%;
+    position: relative;
+    /*height 68*/
+    height: 11.11111111111111%;
+}
+.radioBox{
+    padding-left: 15.74074074074074%;
+}
+label{
+    position: absolute;
+}
+input,select{font-size: 26px;}
+.text{
+    background: #109bdf;
+}
+.text,#carType,#dealer,#province,#city{
+    width:80.37037037037037%;
+    /*height:  63.23529411764706%;*/
+    color: #fff;
+    height: 68.75%;
+    font-family: "微软雅黑";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#carType,#dealer{
+    background-image: url("../img/selectDown.png");
+    background-color: #109bdf;
+    background-repeat: no-repeat;
+    background-size: 6.91244239631336% 45.45454545454545%;
+    background-position: 94% center;
+}
+
+#province,#city{
+    background-image: url("../img/selectDown.png");
+    background-color: #109bdf;
+    background-repeat: no-repeat;
+    background-size: 16.94915254237288% 45.45454545454545%;
+    background-position: 84% center;
+}
+
+
+.customRadio{
+    float: left;
+    width: 26.48148148148148%;
+    background: url("../img/check.png") 62.5% center no-repeat;
+    background-size:27.97202797202797% 62.5%;
+}
+.customSelect{
+    width: 40.78341013824885%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+.customSelect+.customSelect{
+    width: 58.75576036866359%;
+    position: absolute;
+    right: 0;
+}
+#city{
+    width: 69.41176470588235%;
+}
+#province{
+    right: auto;
+    width: 100%;
+}
+.cSR{
+    position: absolute;
+    width:80.37037037037037%;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.cityLabel{
+    position: absolute;
+    width: 29.04375%;
+    text-align: center;
+}
+option{
+    background: #fff;
+    color: #109bdf;
+}
+#man,#woman{
+    visibility: hidden;
+}
+
+.rotate{-webkit-animation:rotate-pin 1s linear;}
+@-webkit-keyframes rotate-pin{
+    0%{-webkit-transform:rotateZ(0deg)}
+    50%{-webkit-transform:rotateZ(360deg)}
+    100%{-webkit-transform:rotateZ(720deg)}
+}
+.scale{-webkit-animation:scale-pin 1.2s ease-out;}
+@-webkit-keyframes scale-pin{
+    0%{-webkit-transform:scale(0);}
+    25%{-webkit-transform:scale(1.1);}
+    50%{-webkit-transform:scale(0.8);}
+    100%{-webkit-transform:scale(1);}
+}
+.vague{-webkit-animation:vague-pin 0.8s linear infinite;}
+@-webkit-keyframes vague-pin{
+    0%{bottom: 1.58730158730159%;}
+    50%{bottom: 0.3%;}
+    100%{bottom: 1.58730158730159%;}
+}
+

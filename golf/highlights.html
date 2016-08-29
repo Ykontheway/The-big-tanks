@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+            var version = parseFloat(RegExp.$1);
+            if(version>2.3){
+                var phoneScale = parseInt(window.screen.width)/640;
+                document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        }else{
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+        //微信去掉下方刷新栏
+        if(RegExp("MicroMessenger").test(navigator.userAgent)){
+            document.addEventListener('WeixinJSBridgeReady', function() {
+                WeixinJSBridge.call('hideToolbar');
+            });
+        }
+    </script>
+    <title>Golf1.2T能力者挑战</title>
+    <link href="css/public.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        .line{
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 72.81746031746032%;
+            width: 85.78125%;
+        }
+        .equal{
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 4.21875%;
+        }
+        .hDown{
+            width: 9.6875%;
+            left: 46.875%;
+            bottom: 1.19047619047619%;
+        }
+        #music{
+            width: 4.6875%;
+            right: 4.375%;
+            top: 8.53174603174603%;
+            z-index: 100;
+        }
+        /*=============     h1     ===============*/
+        .h1{
+            background: #00b8f5;
+        }
+        #h1logo{
+            right: 59.375%;
+            top: 10.91269841269841%;
+            width: 37.8125%;
+        }
+        #h1Tt{
+            right: 11.09375%;
+            top: 12.5%;
+            width: 37.8125%;
+        }
+        .e101{
+            top: 49.6031746031746%;
+        }
+        .e102{
+            top: 71.52777777777778%;
+        }
+        #h1Step1{
+            right: 8.4375%;
+            bottom: 47.91666666666667%;
+            width: 82.8125%;
+        }
+        #h1Step2{
+            left: 10.15625%;
+            bottom: 32.34126984126984%;
+            width: 80.9375%;
+        }
+        #h1Step3{
+            left: 11.40625%;
+            bottom: 9.12698412698413%;
+            width: 79.84375%;
+        }
+
+        /*=============     h2     ===============*/
+        .h2{
+            background: #88b314;
+        }
+        #h2logo{
+            right: 65%;
+            top: 8.92857142857143%;
+            width: 35.15625%;
+        }
+        #h2Tt{
+            right: 13.59375%;
+            top: 9.62301587301587%;
+            width: 40.625%;
+        }
+        .e201{
+            top: 55.15873015873016%;
+        }
+        .e202{
+            top: 71.42857142857143%;
+        }
+        #h2Step1{
+            right: 15.15625%;
+            bottom: 47.02380952380952%;
+            width: 68.90625%;
+        }
+        #h2Step2{
+            right: 15.9375%;
+            bottom: 28.57142857142857%;
+            width: 67.65625%;
+        }
+        #h2Step3{
+            left: 17.34375%;
+            bottom: 6.8452380952381%;
+            width: 67.03125%;
+        }
+
+        /*=============     h3     ===============*/
+        .h3{
+            background: #00b8f5;
+        }
+        #h3logo{
+            right: 64.21875%;
+            top: 8.92857142857143%;
+            width: 35.9375%;
+        }
+        #h3Tt{
+            right: 10.625%;
+            top: 11.9047619047619%;
+            width: 45.9375%;
+        }
+        .e301{
+            top: 67.85714285714286%;
+        }
+        #h3Step1{
+            right: 9.53125%;
+            bottom: 35.71428571428571%;
+            width: 80.3125%;
+        }
+        #h3Step2{
+            right: 11.5625%;
+            top: 76.38888888888889%;
+            width: 81.40625%;
+        }
+
+        /*=============     h4     ===============*/
+        .h4{
+            background: #88b314;
+        }
+        #h4logo{
+            right: 64.375%;
+            top: 8.92857142857143%;
+            width: 35.78125%;
+        }
+        #h4Tt{
+            right: 10.9375%;
+            top: 14.38492063492063%;
+            width: 47.96875%;
+        }
+        .e401{
+            top: 62.79761904761905%;
+        }
+        #h4Step1{
+            right: 10.78125%;
+            bottom:40.67460317460317%;
+            width: 77.8125%;
+        }
+        #h4Step2{
+            right: 14.53125%;
+            top: 68.45238095238095%;
+            width: 70.78125%;
+        }
+
+        /*=============     hIM     ===============*/
+        .h5{
+            background: #00b8f5;
+        }
+        .h5 label,.h5 .cityLabel{
+            color: #fff;
+        }
+        .h5 input,#h5 select{
+            background-color: #fff;
+            color: #00b8f5;
+        }
+        #h5 .submit{
+            left: 36.37901861252115%;
+            position: absolute;
+            width: 32.8125%;
+            height: 20.27729636048527%;
+            background: url("img/submit2.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            bottom: -13.86481802426343%;
+        }
+        #h5 .customRadio{
+            background: url("img/check1.png") 62.5% center no-repeat;
+            background-size:27.97202797202797% 62.5%;
+        }
+        #h5 #carType,#h5 #dealer{
+            background-image: url("img/selectDown1.png");
+            background-repeat: no-repeat;
+            background-size: 6.91244239631336% 45.45454545454545%;
+            background-position: 94% center;
+        }
+        #h5 #province,#h5 #city{
+            background-image: url("img/selectDown1.png");
+            background-repeat: no-repeat;
+            background-size: 16.94915254237288% 45.45454545454545%;
+            background-position: 84% center;
+        }
+        .hform{
+            top: 15.27777777777778%;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <img src="img/logo1.png" alt="" id="header"/>
+    <div class="inner">
+
+        <div class="swipe h1">
+            <img src="img/hDown.png" alt="" class="hDown"/>
+            <img src="img/equality.png" alt="" class="e101 equal"/>
+            <img src="img/equality.png" alt="" class="e102 equal"/>
+            <img src="img/h1logo.png" alt="" id="h1logo"/>
+            <img src="img/h1Title.png" alt="" id="h1Tt"/>
+            <img src="img/line.png" alt="" class="line line1"/>
+            <img src="img/h1step1.png" alt="" id="h1Step1"/>
+            <img src="img/h1step2.png" alt="" id="h1Step2"/>
+            <img src="img/h1step3.png" alt="" id="h1Step3"/>
+        </div>
+
+        <div class="swipe h2">
+            <img src="img/hDown.png" alt="" class="hDown"/>
+            <img src="img/equality.png" alt="" class="e201 equal"/>
+            <img src="img/equality.png" alt="" class="e202 equal"/>
+            <img src="img/h2logo.png" alt="" id="h2logo"/>
+            <img src="img/h2Title.png" alt="" id="h2Tt"/>
+            <img src="img/line.png" alt="" class="line line2"/>
+            <img src="img/h2step1.png" alt="" id="h2Step1"/>
+            <img src="img/h2step2.png" alt="" id="h2Step2"/>
+            <img src="img/h2step3.png" alt="" id="h2Step3"/>
+        </div>
+
+        <div class="swipe h3">
+            <img src="img/hDown.png" alt="" class="hDown"/>
+            <img src="img/equality.png" alt="" class="e301 equal"/>
+            <img src="img/h3logo.png" alt="" id="h3logo"/>
+            <img src="img/h3Title.png" alt="" id="h3Tt"/>
+            <img src="img/line.png" alt="" class="line line3"/>
+            <img src="img/h3step1.png" alt="" id="h3Step1"/>
+            <img src="img/h3step2.png" alt="" id="h3Step2"/>
+        </div>
+
+        <div class="swipe h4">
+            <img src="img/hDown.png" alt="" class="hDown"/>
+            <img src="img/equality.png" alt="" class="e401 equal"/>
+            <img src="img/h4logo.png" alt="" id="h4logo"/>
+            <img src="img/h4Title.png" alt="" id="h4Tt"/>
+            <img src="img/line.png" alt="" class="line line4"/>
+            <img src="img/h4step1.png" alt="" id="h4Step1"/>
+            <img src="img/h4step2.png" alt="" id="h4Step2"/>
+        </div>
+
+        <div class="swipe h5" id="h5">
+            <a href="index.html" class="link linkLeft">
+                <img src="img/backHome3.png" alt=""/>
+            </a>
+            <a href="showTVC.html" class="link linkRight">
+                <img src="img/showTVC3.png" alt=""/>
+            </a>
+            <form action="###" class="hform fm">
+                <p><img src="img/invite1.png" alt="" class="invite"/></p>
+                <p>
+                    <label for="clientName">姓<em class="aSpace"></em>名</label>
+                    <input type="text" id="clientName" class="text" name="clientName"/>
+                </p>
+                <div class="radioBox">
+                    <div class="customRadio">
+                        <label for="man">男</label>
+                        <input type="radio" name="sex" id="man" value="0" checked/>
+
+                    </div>
+                    <div class="customRadio">
+                        <label for="woman">女</label>
+                        <input type="radio" name="sex" id="woman" value="1"/>
+                    </div>
+                </div>
+                <p>
+                    <label for="tel">电<em class="aSpace"></em>话</label>
+                    <input type="text" id="tel" class="text"/>
+                </p>
+                <div class="p">
+                    <label for="carType">车<em class="aSpace"></em>型</label>
+                    <select name="carType" id="carType">
+                        <option value="1">GOLF1.2T</option>
+                        <option value="2">GOLF1.2T</option>
+                        <option value="3">GOLF1.2T</option>
+                        <option value="4">GOLF1.2T</option>
+                    </select>
+                </div>
+                <div class="p">
+                    <label for="province">省<em class="aSpace"></em>份 </label>
+                    <div class="cSR">
+                    <span class="customSelect">
+                        <select name="province" id="province">
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                        </select>
+                    </span>
+                    <span class="customSelect">
+                         <span class="cityLabel">城市</span>
+                        <select name="city" id="city">
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                        </select>
+                    </span>
+                    </div>
+                </div>
+                <div class="p">
+                    <label for="dealer">经销商</label>
+                    <select name="dealer" id="dealer">
+                        <option value="1">朝阳区大望路4S店</option>
+                        <option value="2">朝阳区大望路4S店</option>
+                        <option value="3">朝阳区大望路4S店</option>
+                    </select>
+                </div>
+                <input type="button" class="submit bIM"/>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    function sMove(selector, speed, delay, easing) {
+
+        var _this=selector;
+
+        _this.css({"-webkit-transform":"translate3d(0,0,0)","transition":""+speed+"s "+easing+" "+delay+"s"});
+
+    }
+
+   $(function () {
+       var arr=["backHome3.png","check1.png","checked1.png","equality.png","h1logo.png","h1Title.png","h2logo.png","h2Title.png","h3logo.png","h3Title.png","h4logo.png","h4Title.png","hDown.png","highlights1.png","invite1.png","line.png","logo1.png","selectDown1.png","showTVC3.png","submit2.png"];
+
+       $(document).fnLoad(arr, function () {
+
+           var ease="cubic-bezier(.25,.1,.25,1)",
+                   easein="cubic-bezier(.16,.91,.59,.94)",
+                   sine="cubic-bezier(.73,.46,.75,.7)";
+
+           var swipeHeight=$(".swipe:first").height();
+           var swipeWidth=$(".swipe:first").width();
+
+
+           $(".hDown").addClass("vague");
+
+           $(".hDown,.equal").css({opacity: 0});
+           $(".line,#h2Tt").css({"-webkit-transform": "rotateY(90deg)"});
+           $("#h3logo").css({"-webkit-transform": "rotateY(-90deg)"});
+           $("#h4logo").css({"-webkit-transform": " translate3d(" + (swipeWidth) + "px," + (swipeHeight) + "px,0)"});
+
+           $("#h1logo,#h2logo,#h4Tt,#h1Step3,#h2Step3,#h4Step2").css({"-webkit-transform": "translate3d(" + (-swipeWidth) + "px,0,0)"});
+           /*    left    */
+
+           $("#h3Tt,#h1Step2,#h2Step1").css({"-webkit-transform": "translate3d(" + (swipeWidth) + "px,0,0)"});
+           /*    right    */
+
+           $("#h1Tt,#h3Step2,#h4Step1").css({"-webkit-transform": "translate3d(0," + (-swipeHeight) + "px,0)"});
+           /*    top    */
+
+           $("#h1Step1,#h2Step2,#h3Step1").css({"-webkit-transform": "translate3d(0," + (swipeHeight) + "px,0)"});
+           /*    bottom    */
+
+
+           function fnAn() {
+               /*==============     h1      ===================*/
+               if ($(".inner").attr("index") == "1" && $(".h1").attr("animateBol")) {
+                   sMove($("#h1logo"), 1, 0, ease);
+                   sMove($("#h1Tt"), 1, 0.8, ease);
+                   $(".line1").css({"-webkit-transform": "rotateY(0deg)", "transition": "1.5s 2s"});
+                   sMove($("#h1Step1"),1.2,3.5,ease);
+                   $(".e101").css({opacity:1,"transition":"0.5s 5s"});
+                   sMove($("#h1Step2"),1.2,5.7,ease);
+                   $(".e102").css({opacity:1,"transition":"0.5s 7.1s"});
+                   sMove($("#h1Step3"),1.2,7.8,ease);
+
+                   $(".h1 .hDown").css({opacity: 1, "transition": "1s 9.2s"});
+                   $(".h1").removeAttr("animateBol");
+
+               }
+
+               /*==============     h2      ===================*/
+               if ($(".inner").attr("index") == "2" && $(".h2").attr("animateBol")) {
+                   sMove($("#h2logo"),1, 0, sine);
+                   $("#h2Tt").css({"-webkit-transform": "rotateY(0deg)", "transition": "0.6s 1.9s"});
+                   $(".line2").css({"-webkit-transform": "rotateY(0deg)", "transition": "1.5s 2.8s"});
+                   sMove($("#h2Step1"),1.2,4.5,ease);
+                   $(".e201").css({opacity:1,"transition":"0.5s 5.9s"});
+                   sMove($("#h2Step2"),1.2,6.6,ease);
+                   $(".e202").css({opacity:1,"transition":"0.5s 8s"});
+                   sMove($("#h2Step3"),1.2,8.7,ease);
+
+                   $(".h2 .hDown").css({opacity: 1, "transition": "1s ease 10.2s"});
+                   $(".h2").removeAttr("animateBol");
+               }
+
+               /*==============     h3      ===================*/
+               if ($(".inner").attr("index") == "3" && $(".h3").attr("animateBol")) {
+                   $("#h3logo").css({"-webkit-transform": "rotateY(0deg)", "transition": "1s 0.5s"});
+                   sMove($("#h3Tt"),1,1.5,easein);
+                   $(".line3").css({"-webkit-transform": "rotateY(0deg)", "transition": "1.5s 2.7s"});
+                   sMove($("#h3Step1"),1.2,4.3,ease);
+                   $(".e301").css({opacity:1,"transition":"0.5s 5.7s"});
+                   sMove($("#h3Step2"),1.2,6.4,ease);
+
+                   $(".h3 .hDown").css({opacity: 1, "transition": "1s ease 8s"});
+                   $(".h3").removeAttr("animateBol");
+               }
+
+               /*==============     h4      ===================*/
+               if ($(".inner").attr("index") == "4" && $(".h4").attr("animateBol")) {
+                   sMove($("#h4logo"),1,0.5,ease);
+                   sMove($("#h4Tt"),1,1.5,ease);
+                   $(".line4").css({"-webkit-transform": "rotateY(0deg)", "transition": "1.5s 2.7s"});
+                   sMove($("#h4Step1"),1.2,4.3,ease);
+                   $(".e401").css({opacity:1,"transition":"0.5s 5.7s"});
+                   sMove($("#h4Step2"),1.2,6.4,ease);
+
+                   $(".h4 .hDown").css({opacity: 1, "transition": "1s ease 8s"});
+                   $(".h4").removeAttr("animateBol");
+               }
+           }
+
+           setTimeout(fnAn,1);
+           $(document).fnSwipe(fnAn);
+
+       });
+
+       });
+</script>
+</html>
