@@ -1,0 +1,20 @@
+/*
+ * @file overview: focus box
+ * @author Yk
+ * @version v1
+ * @build 2016.06
+*/
+div,ul,li { margin:0; padding:0; list-style: none; }
+.focus_box { position: relative; width: 400px; height: 400px; margin: 0 auto; overflow: hidden; }
+.focus_box .focus_btn,
+.focus_box .focus_bd { position: absolute; }
+.focus_box .focus_btn { bottom: 10px; right: 20px; }
+.focus_box .focus_btn li { float: left; width: 18px; display: inline; height: 18px; padding: 0; border: 0 none; background: #000; line-height: 18px; text-align: center; font-weight: bold; color: #999; margin-right: 5px; cursor: pointer; }
+.focus_box .focus_btn li.on { color: #fff; }
+.focus_box .focus_bd { top: 0; left: 0; }
+.focus_box .focus_bd li { float: left; display: inline; overflow: hidden; }
+.focus_box .focus_bd img { display: block; width: 400px; height: 400px; min-width: 100%; min-height: 100%;}
+.focus_box .btn_prev,
+.focus_box .btn_next { position: absolute; width: 40px; height: 40px; line-height: 40px; background-color: rgba(0,0,0,0.5);top:50%; margin-top: -20px; color: #fff; font-size: 30px; text-align: center; font-family: Arial; text-decoration: none;}
+.focus_box .btn_prev { left: 0;}
+.focus_box .btn_next { right: 0;}

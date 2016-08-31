@@ -1,12 +1,12 @@
 /*
  * @file overview: focus img
- * @author LiJingYu
+ * @author YK
  * @version v1
  * @build 2016.06
  */
 (function($) {
 	//$.fn是指jquery的命名空间，加上fn上的方法及属性，会对jquery实例每一个有效
-	$.fn.slide = function(config) {
+	$.fn.runningPages = function(config) {
 		//默认配置参数
 		var defaults = {
 			isAuto: true, //是否自动轮播
