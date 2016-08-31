@@ -1,6 +1,6 @@
 /*
  * @file overview: focus img
- * @author LiJingYu
+ * @author YK
  * @version v1
  * @build 2016.06
  */
