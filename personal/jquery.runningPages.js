@@ -1,9 +1,3 @@
-/*
- * @file overview: focus img
- * @author YK
- * @version v1
- * @build 2016.06
- */
 (function($) {
 	//$.fn是指jquery的命名空间，加上fn上的方法及属性，会对jquery实例每一个有效
 	$.fn.runningPages = function(config) {

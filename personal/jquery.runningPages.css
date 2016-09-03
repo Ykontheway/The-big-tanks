@@ -1,9 +1,3 @@
-/*
- * @file overview: focus box
- * @author Yk
- * @version v1
- * @build 2016.06
-*/
 div,ul,li { margin:0; padding:0; list-style: none; }
 .focus_box { position: relative; width: 400px; height: 400px; margin: 0 auto; overflow: hidden; }
 .focus_box .focus_btn,
